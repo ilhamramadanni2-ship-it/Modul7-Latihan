@@ -1,0 +1,26 @@
+#ifndef STACK_H
+#define STACK_H
+
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int info;
+    Node* next;
+};
+
+struct Stack {
+    Node* Top;
+};
+
+void createStack(Stack &S);
+bool isEmpty(Stack S);
+Node* alokasi(int x);
+void dealokasi(Node* p);
+bool push(Stack &S, int x);
+bool pop(Stack &S, int &x);
+void printInfo(Stack S);
+void pushAscending(Stack &S, int x);
+void clearStack(Stack &S);
+
+#endif
